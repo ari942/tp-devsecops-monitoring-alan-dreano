@@ -104,9 +104,9 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: nodeapp-devsecops/package-lock.json
-      - run: npm ci
-      - run: npm test
+          cache-dependency-path:
+      - run: cd nodeapp-devsecops && npm ci
+      - run: cd nodeapp-devsecops && npm test
 
 
       - name: Métadonnées image
